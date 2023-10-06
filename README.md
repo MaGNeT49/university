@@ -1,2 +1,1 @@
-# MIIGAiK university 
-Python programming
+# MIIGAiK university. Python programming
