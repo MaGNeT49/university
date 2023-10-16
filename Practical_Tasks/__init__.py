@@ -1,1 +1,0 @@
-from .Practical_task_1 import *
