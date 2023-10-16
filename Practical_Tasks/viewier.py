@@ -1,8 +1,9 @@
-from Practical_Tasks.Monty_Hall_problem import *
+from Practical_Tasks.paradox import *
 
 
 def show():
-    print(MontiHallProblem(100_000), "%")
+    print(monty_hall(10000), "%")
+    print(birthday(1000), "%")
 
 
 if __name__ == "__main__":
