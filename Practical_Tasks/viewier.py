@@ -1,4 +1,4 @@
-from Practical_task_1.Monty_Hall_problem import *
+from Practical_Tasks.Monty_Hall_problem import *
 
 
 def show():
