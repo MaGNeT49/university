@@ -1,4 +1,5 @@
-from Practical_Tasks.paradox import *
+from python_package.Paradox.monty_hall import *
+from python_package.Paradox.birthday import *
 
 
 def show():

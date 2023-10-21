@@ -1,23 +1,6 @@
 from random import randint
 
 
-def monty_hall(numberOfIterations: int = 100):
-    '''
-    :param numberOfIterations: Количество итерций
-    :return: Вероятность изменения при выборе другой двери
-    '''
-    countChooseOtherDoor = 0
-
-    for _ in range(0, numberOfIterations):
-        userNumDoor = randint(1, 3)
-        doorNotEmpty = randint(1, 3)
-
-        if userNumDoor != doorNotEmpty:
-            countChooseOtherDoor += 1
-
-    return countChooseOtherDoor * 100 / numberOfIterations
-
-
 def birthday(numberOfIterations: int = 100, numberOfPeopleInGroup: int = 23):
     '''
     :param numberOfIterations: Количество итерций
@@ -43,7 +26,6 @@ def birthday(numberOfIterations: int = 100, numberOfPeopleInGroup: int = 23):
 
 
 def main():
-    print(monty_hall())
     print(birthday())
 
 
