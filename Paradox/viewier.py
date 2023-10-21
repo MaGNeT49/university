@@ -1,6 +1,6 @@
-from python_package.Paradox.monty_hall import *
-from python_package.Paradox.birthday import *
-
+from Paradox.monty_hall import *
+from Paradox.birthday import *
+import sys
 
 def show():
     print(monty_hall(10000), "%")
