@@ -7,7 +7,6 @@ def main():
     file_record = get_record()
     record = 0
     word = words[randint(0, len(words) - 1)]
-    default_health = 0
     word_hide = []
 
     for i in range(0, len(word)):
@@ -15,7 +14,7 @@ def main():
 
     playing = True
 
-    while (True):
+    while True:
         level = int(input("Введите уровень сложности:\n1 - Лёгкий.\n2 - Средний.\n3 - Сложный.\n"))
         if level == 1:
             default_health = 7
@@ -30,6 +29,7 @@ def main():
             print("Вы ввели неправильное значение!")
 
     health = default_health
+    letter = ""
 
     while playing:
         if "".join(word_hide) != word.upper() and health > 0:
