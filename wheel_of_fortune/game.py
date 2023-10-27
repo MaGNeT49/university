@@ -15,14 +15,14 @@ def main():
     playing = True
 
     while True:
-        level = int(input("Введите уровень сложности:\n1 - Лёгкий.\n2 - Средний.\n3 - Сложный.\n"))
-        if level == 1:
+        level = input("Введите уровень сложности:\n1 - Лёгкий.\n2 - Средний.\n3 - Сложный.\n")
+        if level == '1':
             default_health = 7
             break
-        elif level == 2:
+        elif level == '2':
             default_health = 5
             break
-        elif level == 3:
+        elif level == '3':
             default_health = 3
             break
         else:
