@@ -1,11 +1,11 @@
 from random import randint
 
 
-def birthday(numberOfIterations: int = 100, numberOfPeopleInGroup: int = 23):
+def birthday(numberOfPeopleInGroup: int = 23, numberOfIterations: int = 10000):
     '''
-    :param numberOfIterations: Количество итерций
+    :param numberOfIterations: Количество итераций
     :param numberOfPeopleInGroup: Количество людей в группе
-    :return: вероятность совпадений дня рождения хотя бы у двух людей
+    :return: вероятность совпадений дня рождения хотя бы у двух людей в группе
     '''
     countOfMatches = 0
 

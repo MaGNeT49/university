@@ -3,7 +3,7 @@ from random import randint
 
 def monty_hall(numberOfIterations: int = 10000):
     '''
-    :param numberOfIterations: Количество итерций
+    :param numberOfIterations: Количество итераций
     :return: Вероятность изменения при выборе другой двери
     '''
     countChooseOtherDoor = 0
