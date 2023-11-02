@@ -11,9 +11,11 @@ def processing(file: str):
         f.close()
 
     except FileNotFoundError:
-        return "Файл не найден"
+        return "Файл не найден!"
     except OSError:
-        return "Ошибка операционной системы"
+        return "Ошибка операционной системы!"
+    except ValueError:
+        return "В файле есть специфические символы!"
     except:
         return "Произошла непредвиденная ошибка!"
     else:
