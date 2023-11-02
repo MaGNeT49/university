@@ -6,4 +6,6 @@ def processing(file: str):
     for i in range(0, count_num):
         numbers.append(int(f.readline()))
 
+    f.close()
+
     return numbers
