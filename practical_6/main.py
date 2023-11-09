@@ -20,4 +20,3 @@ file = open("raise.txt", mode="w", encoding="utf8")
 
 for i in lst_raise:
     file.write(f'{i}\n')
-#
