@@ -14,7 +14,6 @@ def main():
             ("отправился" == new_lst[2]  and "в" == new_lst[3])) and \
             new_lst[4].istitle() and new_lst[5] == 'в' and datetime.strptime(new_lst[6], "%H:%M:%S"):
             lst_raise.append(f'[{new_lst[6]}] - Поезд № {new_lst[1]} {new_lst[3]} {new_lst[4]}')
-    print(lst_raise)
 
     file.close()
 
