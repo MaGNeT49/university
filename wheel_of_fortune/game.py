@@ -60,11 +60,13 @@ def main():
                 break
         elif letter.upper() in word_hide:
             print("Такая буква уже есть.")
+        elif letter.upper() not in word.upper() and len(letter) > 1:
+            health = 0
         elif letter in word:
             for i in range(0, len(word)):
                 if word[i] == letter:
                     word_hide[i] = letter.upper()
-        elif health == 0:
+        if health == 0:
             if input("Хотите восстановить жизни? (да/нет)\n") == "да":
                 print(f"Рекорд: {max(record, file_record)}")
                 health = default_health
