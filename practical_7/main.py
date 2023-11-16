@@ -36,4 +36,3 @@ if __name__ == "__main__":
     print(get_totals(book))
     print(get_totals(list(reader)))
     file.close()
-#
