@@ -2,7 +2,7 @@ import re
 
 
 def main():
-    file = open("schedule.txt", mode="r", encoding="utf8")
+    file = open(r"D:\GitHub\university_python\practical_6\schedule.txt", mode="r", encoding="utf8")
     lst = file.read().splitlines()
     lst_raise = []
     pattern = r"^Рейс\s\d+\s(отправился\sв|прибыл\sиз)\s\w+\sв\s(0[0-9]|1[0-9]|2[0-3]):([0-5][0-9]):([0-5][0-9])$"
@@ -13,7 +13,6 @@ def main():
 
         if match:
             lst_raise.append(f'[{row[6]}] - Поезд № {row[1]} {row[3]} {row[4]}')
-            print(i)
 
     file.close()
 
