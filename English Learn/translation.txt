@@ -1,0 +1,122 @@
+я|.|6
+в|in|5
+и|and|5
+что|what|5
+да|Yes|4
+есть|installed|4
+ага|Huh|3
+всё|Everything|3
+если|if|3
+кстати|By the way|3
+можно|May I come in? |3
+мочь|might|3
+понять|captain.|3
+сам|self|3
+синтаксис|syntax|3
+у|y|3
+база|list|2
+библиотека|библиотека|2
+быть|be|2
+знать|Aristocracy|2
+лёгкий|light|2
+ну|well|2
+около|approximately|2
+они|Oni|2
+про|on|2
+спасибо|thank you|2
+так|so|2
+уже|Your Business|2
+это|is|2
+язык|language|2
+а|а|1
+анимировать|animate|1
+болона|bologna|1
+бывать|to be|1
+весь|весь|1
+вид|type|1
+видеть|see|1
+воздух|air|1
+вообще|at all|1
+вроде|sort|1
+второй|second|1
+выкупать|repurchase|1
+давать|ɡive|1
+двигаться|move |1
+делать|make|1
+дело|matter|1
+деньга|money|1
+добавить|add|1
+документация|design|1
+же|Wher|1
+живить|живить|1
+за|for|1
+зайти|Stop by|1
+заказать|order|1
+закинуть|throw|1
+закончиться|end|1
+заучивать|to learn by heart|1
+зачёт|passed|1
+значок|section|1
+игра|сыграть|1
+изучать|learn|1
+изучаться|to be studied|1
+илюха|iliukha|1
+иметь|have	a|1
+к|к|1
+какой|which|1
+книга|book|1
+конечно|sure|1
+конкурент|competitor|1
+кооператив|Cooperative|1
+корпус|housing|1
+крация|kratom|1
+курс|course|1
+либо|or|1
+многопоточный|Multithreaded|1
+на|Moscow City Committee for State Registration of Real Estate Titles|1
+написать|Comment|1
+нормально|normal|1
+ночью|at night|1
+обучиться|To learn|1
+он|??|1
+от|from|1
+печально|Deplorably|1
+плюс|plus|1
+по|under|1
+поверить|believe|1
+поддержка|support|1
+потом|then|1
+почти|almost|1
+прерываться|to be interrupted|1
+принять|accept|1
+продувка|scavenging|1
+просто|Simple|1
+пыль|dust|1
+работа|work|1
+развиваться|Develop.|1
+с|с|1
+салфетка|napkin|1
+сделать|todo|1
+себя|it|1
+сейчас|Now,|1
+сервер|server|1
+серверный|Server|1
+серия|Series|1
+сжатый|compact|1
+сказать|tell|1
+скинуть|Reset|1
+смочь|to be able to|1
+сначала|first|1
+спиртовой|alcoholic|1
+сыграть|pow|1
+там|there|1
+теперь|at present|1
+термин|term|1
+тип|Type|1
+то|than|1
+только|only|1
+хороший|Good|1
+человек|people|1
+чушь|galimatias|1
+шум|noise|1
+эпизод|Episode|1
