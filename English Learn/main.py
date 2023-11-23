@@ -24,7 +24,8 @@ list_d.sort(reverse=True, key=lambda i: i[1])
 translator = Translator(from_lang="ru", to_lang="en")
 
 with open("translation.txt", "w", encoding="utf8") as file:
+    file.write("Исходное слово|Перевод|Количество упоминаний\n")
     for i in range(len(list_d)):
         translation = translator.translate(list_d[i][0])
         file.write(f"{list_d[i][0]}|{translation}|{list_d[i][1]}\n")
-        print(f"Переведено {i + 1} слов")
+        print(f"Переведено слов: {i + 1}")
