@@ -5,7 +5,7 @@ from Office_Tweaks.office_tweaks.compressor import *
 
 def changing_directory():
     """
-    Функция изменения директории
+    Функция в меню, которая изменяет директорию
     """
     path = input("Укажите корректный путь к рабочему каталогу: ")
 
@@ -60,7 +60,7 @@ def converter_file(file_format: str):
 
 def image_compression():
     """
-    Сжатие изображения
+    Функция в меню, которая делает сжатие изображения
     """
     files = get_files_formats(get_current_catalog(), [".jpeg", ".gif", ".png", ".jpg"])
     count = 1
@@ -75,24 +75,51 @@ def image_compression():
         print(f"{count}. {file}")
         count += 1
 
-    num = input("Введите номер файла для преобразования "
-                "(чтобы преобразовать все файлы из данного каталога введите 0): ")
-    quality = input("Введите параметр сжатия (от 0 до 100): ")
+    try:
+        num = input("Введите номер файла для преобразования "
+                    "(чтобы преобразовать все файлы из данного каталога введите 0): ")
 
-    if num.isdigit() and quality.isdigit():
-        if 0 <= int(num) <= len(files) and 0 <= int(quality) <= 100:
-            num = int(num)
-            quality = int(quality)
+        if 0 <= int(num) <= len(files):
+            quality = input("Введите параметр сжатия (от 0 до 100): ")
+            if 0 <= int(quality) <= 100:
+                num = int(num)
+                quality = int(quality)
 
-            if num == 0:
-                compression(files, quality)
+                if num == 0:
+                    for file in files:
+                        compression(file, quality)
+                else:
+                    compression(files[num - 1], quality)
             else:
-                compression(files[num - 1], quality)
+                print("Число не входит в диапозон от 0 до 100!")
         else:
             print("Такого числа нет в списке!")
-    else:
+    except ValueError:
         print("Введено не число!")
     print()
+
+
+def delete_files():
+    """
+    Функция в меню, которая даёт на выбор 4 действия для удаления файла(ов)
+    """
+    print("Выберите действие:\n\n1. Удалить все файлы начинающиеся на определенную подстроку"
+          "\n2. Удалить все файлы заканчивающиеся на определенную подстроку"
+          "\n3. Удалить все файлы содержащие определенную подстроку"
+          "\n4. Удалить все файлы по расширению")
+    num = input("Введите номер действия: ")
+
+    match num:
+        case "1":
+            delete_files_start(get_current_catalog(), input("Введите подстроку: "))
+        case "2":
+            delete_files_end(get_current_catalog(), input("Введите подстроку: "))
+        case "3":
+            delete_files_inside(get_current_catalog(), input("Введите подстроку: "))
+        case "4":
+            delete_files_formats(get_current_catalog(), input("Введите подстроку: "))
+        case _:
+            print("Нет такого действия!")
 
 
 def show():
@@ -117,7 +144,7 @@ def show():
                 case 3:
                     image_compression()
                 case 4:
-                    print()
+                    delete_files()
                 case 5:
                     break
                 case _:

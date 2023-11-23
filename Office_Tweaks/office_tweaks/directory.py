@@ -63,3 +63,79 @@ def get_files_formats(path: str, file_formats: list):
             files.append(file)
 
     return files
+
+
+def delete_files_formats(path_name: str, file_format: str):
+    """
+    Удаление файла по формату
+    :param path_name: Имя файла
+    :param file_format: Формат файла
+    """
+    files = get_files_format(path_name, file_format)
+
+    if len(files) == 0:
+        print("Нету файлов для удаления!")
+
+    for file in files:
+        os.remove(file)
+        print(f"Файл: \"{file}\" успешно удалён!")
+
+
+def delete_files_start(path_name: str, file_start: str):
+    """
+    Удаление файла по начальной строке
+    :param path_name: Имя файла
+    :param file_start: Начальная подстрока
+    """
+    files = []
+
+    for file in os.listdir(path_name):
+        if file.startswith(file_start):
+            files.append(file)
+
+    if len(files) == 0:
+        print("Нету файлов для удаления!")
+
+    for file in files:
+        os.remove(file)
+        print(f"Файл: \"{file}\" успешно удалён!")
+
+
+def delete_files_end(path_name: str, file_end: str):
+    """
+    Удаление файла по концу названия файла
+    :param path_name: Имя файла
+    :param file_end: Конечная подстрока
+    """
+    files = []
+
+    for file in os.listdir(path_name):
+        if file.rsplit('.', maxsplit=1)[0].endswith(file_end):
+            files.append(file)
+
+    if len(files) == 0:
+        print("Нету файлов для удаления!")
+
+    for file in files:
+        os.remove(file)
+        print(f"Файл: \"{file}\" успешно удалён!")
+
+
+def delete_files_inside(path_name: str, file_inside: str):
+    """
+    Удаление файла если есть подстрока в название файла
+    :param path_name: Имя файла
+    :param file_inside: Подстрока внутри слова
+    """
+    files = []
+
+    for file in os.listdir(path_name):
+        if file_inside in file.rsplit('.', maxsplit=1)[0]:
+            files.append(file)
+
+    if len(files) == 0:
+        print("Нету файлов для удаления!")
+
+    for file in files:
+        os.remove(file)
+        print(f"Файл: \"{file}\" успешно удалён!")
