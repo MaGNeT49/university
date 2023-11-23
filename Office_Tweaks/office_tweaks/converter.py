@@ -1,19 +1,62 @@
-from pdf2docx import parse
-import os
+from pdf2docx import Converter
+from docx2pdf import convert
+from directory import get_files_format
 
 
-def show_files_pdf(path):
+def get_files_pdf(path):
     """
-    Функция выводит список файлов PDF
+    Функция возращает список файлов PDF
     :param path: Путь файла
-    :return: Количество файлов PDF
+    :return: Файлы PDF
     """
-    count = 0
-    print("Список файлов с расширением .pdf в данном каталоге:\n")
-    for file in os.listdir(path):
-        if file.endswith('.pdf'):
-            print(f"{count + 1}. {file}")
-            count += 1
+    return get_files_format(path, ".pdf")
 
-    return count
 
+def get_files_docx(path):
+    """
+    Функция возращает список файлов PDF
+    :param path: Путь файла
+    :return: Файлы PDF
+    """
+    return get_files_format(path, ".docx")
+
+
+def all_convert_pdf_to_docx(files: list):
+    """
+
+    :param files:
+    :return:
+    """
+    for pdf_file in files:
+        convert_pdf_to_docx(pdf_file)
+
+
+def convert_pdf_to_docx(pdf_file: str):
+    """
+
+    :param pdf_file:
+    :return:
+    """
+    docx_file = str(pdf_file) + ".docx"
+    cv = Converter(pdf_file)
+    cv.convert(docx_file)
+    cv.close()
+
+
+def all_convert_docx_to_pdf(files: list):
+    """
+
+    :param files:
+    :return:
+    """
+    for pdf_file in files:
+        convert_docx_to_pdf(pdf_file)
+
+
+def convert_docx_to_pdf(docx_file: str):
+    """
+
+    :param docx_file:
+    :return:
+    """
+    convert(docx_file, docx_file + ".pdf")

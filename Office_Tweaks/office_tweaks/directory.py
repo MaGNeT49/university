@@ -32,3 +32,34 @@ def is_valid_path(path: str) -> bool:
         return False
     else:
         return True
+
+
+def get_files_format(path: str, file_format: str):
+    """
+    Получение файлов по формату в директории
+    :param path: директория поиска файлов
+    :param file_format: файловый формат
+    :return: список файлов
+    """
+    files = []
+
+    for file in os.listdir(path):
+        if file.endswith(file_format):
+            files.append(file)
+
+    return files
+
+
+def get_files_formats(path: str, file_formats: list):
+    """
+        Получение файлов по несколько форматов в директории
+        :param path: директория поиска файлов
+        :param file_formats: файловые форматы
+        :return: список файлов
+        """
+    files = []
+    for i in file_formats:
+        for file in get_files_format(path, i):
+            files.append(file)
+
+    return files
