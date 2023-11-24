@@ -4,7 +4,7 @@
 и|and|5
 что|what|5
 да|Yes|4
-есть|installed|4
+есть|yes|4
 ага|Huh|3
 всё|Everything|3
 если|if|3
