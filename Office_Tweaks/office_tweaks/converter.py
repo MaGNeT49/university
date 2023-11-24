@@ -3,7 +3,7 @@ from docx2pdf import convert
 from Office_Tweaks.office_tweaks.directory import get_files_format
 
 
-def get_files_pdf(path):
+def get_files_pdf(path: str) -> list:
     """
     Функция возращает список файлов PDF
     :param path: Путь файла
@@ -12,7 +12,7 @@ def get_files_pdf(path):
     return get_files_format(path, ".pdf")
 
 
-def get_files_docx(path):
+def get_files_docx(path: str) -> list:
     """
     Функция возращает список файлов PDF
     :param path: Путь файла

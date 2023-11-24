@@ -34,13 +34,12 @@ def converter_file(file_format: str):
     for file in files:
         print(f"{count}. {file}")
         count += 1
+    try:
+        num = int(input("Введите номер файла для преобразования "
+                        "(чтобы преобразовать все файлы "
+                        "из данного каталога введите 0): "))
 
-    num = input("Введите номер файла для преобразования "
-                "(чтобы преобразовать все файлы из данного каталога введите 0): ")
-
-    if num.isdigit():
-        if 0 <= int(num) <= len(files):
-            num = int(num)
+        if 0 <= num <= len(files):
             if num == 0:
                 if file_format == ".pdf":
                     all_convert_pdf_to_docx(files)
@@ -53,7 +52,7 @@ def converter_file(file_format: str):
                     convert_docx_to_pdf(files[num - 1])
         else:
             print("Такого числа нет в списке!")
-    else:
+    except ValueError:
         print("Введено не число!")
     print()
 
@@ -76,15 +75,13 @@ def image_compression():
         count += 1
 
     try:
-        num = input("Введите номер файла для преобразования "
-                    "(чтобы преобразовать все файлы из данного каталога введите 0): ")
+        num = int(input("Введите номер файла для преобразования "
+                        "(чтобы преобразовать все файлы "
+                        "из данного каталога введите 0): "))
 
-        if 0 <= int(num) <= len(files):
-            quality = input("Введите параметр сжатия (от 0 до 100): ")
-            if 0 <= int(quality) <= 100:
-                num = int(num)
-                quality = int(quality)
-
+        if 0 <= num <= len(files):
+            quality = int(input("Введите параметр сжатия (от 0 до 100): "))
+            if 0 <= quality <= 100:
                 if num == 0:
                     for file in files:
                         compression(file, quality)
@@ -133,24 +130,21 @@ def show():
         user_input = input("Ваш выбор: ")
         print()
 
-        if user_input.isdigit():
-            match int(user_input):
-                case 0:
-                    changing_directory()
-                case 1:
-                    converter_file(".pdf")
-                case 2:
-                    converter_file(".docx")
-                case 3:
-                    image_compression()
-                case 4:
-                    delete_files()
-                case 5:
-                    break
-                case _:
-                    print("Введено неправильное значение!")
-        else:
-            print("Введена не цифра!")
+        match user_input:
+            case "0":
+                changing_directory()
+            case "1":
+                converter_file(".pdf")
+            case "2":
+                converter_file(".docx")
+            case "3":
+                image_compression()
+            case "4":
+                delete_files()
+            case "5":
+                break
+            case _:
+                print("Введено неправильное значение!")
 
 
 if __name__ == "__main__":
