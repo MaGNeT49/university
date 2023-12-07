@@ -34,7 +34,7 @@ def is_valid_path(path: str) -> bool:
         return True
 
 
-def get_files_format(path: str, file_format: str):
+def get_files_format(path: str, file_format: str) -> list:
     """
     Получение файлов по формату в директории
     :param path: директория поиска файлов
@@ -72,7 +72,6 @@ def delete_files_formats(path_name: str, file_format: str):
     :param file_format: Формат файла
     """
     files = get_files_format(path_name, file_format)
-
     if len(files) == 0:
         print("Нету файлов для удаления!")
 
