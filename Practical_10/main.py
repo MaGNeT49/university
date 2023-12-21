@@ -1,5 +1,5 @@
 import PySimpleGUI as sg
-from Office_Tweaks.office_tweaks.main import *
+from office_tweaks.main import *
 
 
 def get_all_files_formats(path: str):
