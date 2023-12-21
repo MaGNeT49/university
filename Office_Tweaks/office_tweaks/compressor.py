@@ -9,3 +9,4 @@ def compression(image_path: str, quality: int):
     """
     image_file = Image.open(image_path)
     image_file.save(image_path, quality=quality)
+    print("Произошло сжатие изображения", image_path, quality)

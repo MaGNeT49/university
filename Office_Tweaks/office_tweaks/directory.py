@@ -24,6 +24,9 @@ def is_valid_path(path: str) -> bool:
     :return: True - если путь правильный, False - если путь неправильный
     """
     check = True
+    if path == None:
+        print(f"Пути \"{path}\" не существует!")
+        return False
     if not os.path.exists(path):
         print(f"Пути \"{path}\" не существует!")
         return False
@@ -65,6 +68,17 @@ def get_files_formats(path: str, file_formats: list):
     return files
 
 
+def delete_all_files(data: list):
+    if len(data) == 0:
+        print("Нету файлов для удаления!")
+        return
+
+    for file in data:
+        os.remove(file)
+        print(f"Файл: \"{file}\" успешно удалён!")
+
+    return data
+
 def delete_files_formats(path_name: str, file_format: str):
     """
     Удаление файла по формату
@@ -74,6 +88,7 @@ def delete_files_formats(path_name: str, file_format: str):
     files = get_files_format(path_name, file_format)
     if len(files) == 0:
         print("Нету файлов для удаления!")
+        return
 
     for file in files:
         os.remove(file)
